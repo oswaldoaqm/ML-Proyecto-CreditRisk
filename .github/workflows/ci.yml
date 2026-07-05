@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    name: Lint scripts (ruff)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install ruff
+      # E9/F63/F7/F82 = errores reales (sintaxis, nombres indefinidos), no estilo
+      - run: ruff check scripts/ --select E9,F63,F7,F82
+      - run: ruff check scripts/ --exit-zero  # reporte completo, informativo
+
+  validate:
+    name: Validate notebooks & scripts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install nbformat
+      - name: Scripts compilan
+        run: python -m py_compile scripts/*.py
+      - name: Notebooks son JSON valido (nbformat 4)
+        run: |
+          python - <<'EOF'
+          import nbformat, glob, sys
+          nbs = glob.glob('notebooks/*.ipynb')
+          assert nbs, 'No se encontraron notebooks'
+          for p in sorted(nbs):
+              nb = nbformat.read(p, as_version=4)
+              nbformat.validate(nb)
+              print(f'OK  {p} ({len(nb.cells)} celdas)')
+          print(f'\n{len(nbs)} notebooks validados')
+          EOF
+
+  deps:
+    name: requirements.txt instala limpio
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Imports criticos funcionan
+        run: python -c "import pandas, numpy, sklearn, lightgbm, xgboost, optuna, shap; print('stack OK')"

@@ -396,14 +396,14 @@
 ## Fase 8-extra — Baselines XGBoost y MLP (para el informe final)
 **Script: scripts/08_extra_baselines.py**
 
-- Motivación: el informe parcial prometía XGBoost; el sílabo cubre redes neuronales. Mismo protocolo del notebook 07 (split 80/20 rs=42, sub-split 90/10 para early stopping, X_val intacto).
-- **XGBoost** (hist, lossguide 48 hojas, lr=0.05, spw=1.0): AUC train 0.8655 | **val 0.7858** | best_iter 338. Queda entre LightGBM sin tunear (0.7849) y el tuneado (0.7882) → LightGBM tuneado sigue siendo el ganador.
-- **MLP** (64–32, ReLU, Adam, alpha=1e-2, mejor epoch=6 por early stopping): AUC train 0.8024 | **val 0.7701**. Por debajo incluso de la logística (0.7749) → replica a Gunnarsson et al. (EJOR 2021): deep learning no supera al boosting en tabular de crédito.
+- En el parcial prometí XGBoost y el sílabo cubre redes neuronales: no quería dejar ese cabo suelto en la entrega final. Repliqué el protocolo exacto del 07 (split 80/20 rs=42, sub-split 90/10 para early stopping, X_val intacto) para que la comparación fuera justa.
+- **XGBoost** (hist, lossguide 48 hojas, lr=0.05, spw=1.0): AUC train 0.8655 | **val 0.7858** | best_iter 338. Quedó exactamente donde tenía que quedar: entre mi LightGBM sin tunear (0.7849) y el tuneado (0.7882). El tuneado sigue siendo el ganador, y la promesa del parcial quedó cerrada.
+- **MLP** (64–32, ReLU, Adam, alpha=1e-2, mejor epoch=6): AUC train 0.8024 | **val 0.7701**. Entré esperando que la red al menos le ganara a la logística; salió por debajo (0.7749). No es un experimento fallido: es Gunnarsson et al. (EJOR 2021) replicado con mis propios datos — en tabular de crédito, el deep learning no le gana al boosting.
 
 ## Fase 8-bis — Validación externa Kaggle (late submission)
-- `submission_lgbm_tuned.csv` → **AUC público 0.78309 | privado 0.77958** (ganador de la competencia: 0.80570 privado). Coherente con la validación interna 0.7882 → protocolo honesto confirmado. Incluido en el paper (sección "Validación externa en Kaggle").
+- Subí `submission_lgbm_tuned.csv` como late submission: **público 0.78309 | privado 0.77958** (el ganador de la competencia hizo 0.80570 con ensambles masivos). Nueve milésimas de distancia con mi validación interna (0.7882): el protocolo aguantó contra el test que nadie puede tocar. Sin fugas.
 
 ## Fase 9 — Entrega final
-- `paper/main.tex`: informe IEEE Transactions completo (abstract ≤150 palabras, 15 referencias, metodología, resultados con 5 tablas + 5 figuras, subsección de fairness, conclusiones, trabajo futuro).
-- `README.md` + `.gitignore` listos para publicar el repo en GitHub (data excluida).
-- Pendiente (usuario): crear repo GitHub y reemplazar el placeholder del link en `paper/main.tex` (sección "Código implementado"); compilar en Overleaf; enviar PDF a vmartinez@utec.edu.pe antes del 11 de julio 11:59 p.m.
+- `paper/main.tex`: el informe IEEE completo (abstract en 144 palabras, 15 referencias, 5 tablas + 5 figuras, fairness con subsección propia). Regla que me impuse: cada número del paper recalculado desde el booster guardado antes de darlo por bueno.
+- `README.md`, `requirements.txt` y `.gitignore` listos; repo publicado en https://github.com/oswaldoaqm/ML-Proyecto-CreditRisk (data excluida del versionado).
+- Lo que me queda: compilar la última versión en Overleaf, leerlo completo con Maricielo, y enviar el PDF a vmartinez@utec.edu.pe antes del sábado 11 de julio, 11:59 p.m.
