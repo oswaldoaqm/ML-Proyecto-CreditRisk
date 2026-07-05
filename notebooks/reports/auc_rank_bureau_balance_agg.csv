@@ -1,0 +1,25 @@
+feature,auc,direction,pct_null
+BB_MONTHS_OBSERVED_MEAN,0.5952,↓ menos default,0.0
+BB_STATUS_C_CNT_MEAN,0.5751,↓ menos default,0.0
+BB_STATUS_C_PCT_MEAN,0.56,↓ menos default,0.0
+BB_MONTHS_OBSERVED_SUM,0.5575,↓ menos default,0.0
+BB_DPD_MEAN_MEAN,0.5509,↑ más default,1.75
+BB_STATUS_1_PCT_MEAN,0.5503,↑ más default,0.0
+BB_STATUS_0_PCT_MEAN,0.5483,↑ más default,0.0
+BB_DPD_MAX_MEAN,0.5452,↑ más default,1.75
+BB_STATUS_1_CNT_MEAN,0.5448,↑ más default,0.0
+BB_HAS_DPD_SUM_SUM,0.5433,↑ más default,0.0
+BB_HAS_DPD_ANY_SUM,0.5427,↑ más default,0.0
+BB_STATUS_0_CNT_MEAN,0.5412,↓ menos default,0.0
+BB_DPD_MAX_MAX,0.541,↑ más default,1.75
+BB_HAS_DPD_ANY_MAX,0.5408,↑ más default,0.0
+BB_STATUS_X_CNT_MEAN,0.5279,↓ menos default,0.0
+BB_STATUS_2_CNT_MEAN,0.5069,↑ más default,0.0
+BB_STATUS_2_PCT_MEAN,0.5069,↑ más default,0.0
+BB_STATUS_3_PCT_MEAN,0.505,↑ más default,0.0
+BB_STATUS_3_CNT_MEAN,0.505,↑ más default,0.0
+BB_STATUS_4_CNT_MEAN,0.5049,↑ más default,0.0
+BB_STATUS_4_PCT_MEAN,0.5049,↑ más default,0.0
+BB_STATUS_5_CNT_MEAN,0.5046,↑ más default,0.0
+BB_STATUS_5_PCT_MEAN,0.5046,↑ más default,0.0
+BB_STATUS_X_PCT_MEAN,0.5044,↑ más default,0.0

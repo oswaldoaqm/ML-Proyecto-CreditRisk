@@ -1,0 +1,26 @@
+feature,auc,direction,pct_null
+POS_MONTHS_BALANCE_MIN,0.5584,↑ más default,0.0
+POS_N_PREV_LOANS,0.5491,↓ menos default,0.0
+POS_MONTHS_BALANCE_COUNT,0.5456,↓ menos default,0.0
+POS_MONTHS_BALANCE_MEAN,0.5437,↑ más default,0.0
+POS_SK_DPD_DEF_MEAN,0.5261,↑ más default,0.0
+POS_POS_HAS_DPD_MEAN,0.526,↑ más default,0.0
+POS_POS_HAS_DPD_DEF_MEAN,0.526,↑ más default,0.0
+POS_SK_DPD_MEAN,0.5254,↑ más default,0.0
+POS_SK_DPD_DEF_MAX,0.5253,↑ más default,0.0
+POS_SK_DPD_DEF_SUM,0.5252,↑ más default,0.0
+POS_POS_HAS_DPD_DEF_SUM,0.5246,↑ más default,0.0
+POS_POS_HAS_DPD_DEF_MAX,0.5242,↑ más default,0.0
+POS_SK_DPD_MAX,0.5241,↑ más default,0.0
+POS_SK_DPD_SUM,0.524,↑ más default,0.0
+POS_POS_HAS_DPD_MAX,0.5239,↑ más default,0.0
+POS_POS_HAS_DPD_SUM,0.5237,↑ más default,0.0
+POS_CNT_INSTALMENT_FUTURE_MEAN,0.5209,↑ más default,0.01
+POS_CNT_INSTALMENT_MEAN,0.5163,↑ más default,0.01
+POS_MONTHS_BALANCE_MAX,0.5123,↓ menos default,0.0
+POS_POS_IS_COMPLETED_MAX,0.5114,↓ menos default,0.0
+POS_POS_IS_ACTIVE_MEAN,0.508,↓ menos default,0.0
+POS_CNT_INSTALMENT_FUTURE_MAX,0.5065,↑ más default,0.01
+POS_CNT_INSTALMENT_MAX,0.5063,↑ más default,0.01
+POS_POS_IS_COMPLETED_MEAN,0.502,↑ más default,0.0
+POS_POS_IS_ACTIVE_MAX,0.5001,↓ menos default,0.0

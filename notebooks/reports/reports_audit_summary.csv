@@ -1,0 +1,11 @@
+archivo,filas,columnas,memoria_mb,duplicados,pct_nulos
+application_train.csv,307511,122,505.0,0,24.4
+application_test.csv,48744,121,79.7,0,23.81
+bureau.csv,1716428,17,472.8,0,13.5
+bureau_balance.csv,27299925,3,1718.3,0,0.0
+previous_application.csv,1670214,37,1703.0,0,17.98
+POS_CASH_balance.csv,10001358,8,1060.9,0,0.07
+credit_card_balance.csv,3840312,23,846.4,0,6.65
+installments_payments.csv,13605401,8,830.4,0,0.01
+HomeCredit_columns_description.csv,219,5,0.1,0,12.15
+sample_submission.csv,48744,2,0.7,0,0.0
